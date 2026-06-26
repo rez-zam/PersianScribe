@@ -1,0 +1,25 @@
+# Outputs & uploads
+outputs/
+_uploaded/
+*.txt
+*.srt
+*.docx
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+build/
+dist/
+
+# Whisper model cache
+~/.cache/whisper/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# IDE
+.vscode/
+.idea/

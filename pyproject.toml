@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "persianscribe"
+version = "0.1.0"
+description = "A Whisper-powered Persian audio-to-text toolkit"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Reza Zamani", email = "reza.zamani1998@yahoo.com" }]
+keywords = ["whisper", "transcription", "persian", "speech-to-text", "asr"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Topic :: Multimedia :: Sound/Audio :: Speech",
+]
+
+dependencies = [
+    "openai-whisper",
+    "torch",
+    "tqdm",
+    "python-docx",
+]
+
+[project.optional-dependencies]
+notebook = ["ipywidgets", "jupyter"]
+dev = ["pytest", "black", "ruff", "mypy"]
+
+[project.scripts]
+persianscribe = "persianscribe.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/rez-zam/PersianScribe.git"
+Issues = "https://github.com/rez-zam/PersianScribe/issues"
